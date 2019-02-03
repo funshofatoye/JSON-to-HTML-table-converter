@@ -226,6 +226,9 @@ function CreateTable() {
         // assign each row outHTML (tag name & innerHTML) to the array
         for ($i = $j, $ii = 0; $i < $rowCount; $i++, $ii++)
             $tr[$ii] = table.rows[$i].outerHTML;
+            console.log($i)
+            console.log($j)
+            console.log($ii)
         // create a div block to hold the buttons
         table.insertAdjacentHTML("afterend","<div id='buttons'></div");
         // the first sort, default page is the first one
