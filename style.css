@@ -1,8 +1,8 @@
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
 }
+
 
 #data {
     width: 80%;
@@ -13,9 +13,20 @@ body {
     background-color: rgb(231, 231, 231);
 }
 
+@media only screen and (max-width: 480px){
+    #data {
+        width: 100%;
+        overflow-y: auto;
+    }
+}
+
 .container {
     width: 400px;
     margin: 3em auto;
+}
+
+#table {
+    margin-bottom: 30px;
 }
 
 
@@ -24,6 +35,12 @@ table {
     border: 1px solid #CCC;
     border-spacing: 0;
     margin: 3em auto;
+}
+
+@media only screen and (max-width: 480px){
+    table {
+        width: 100%;
+    }
 }
 
 table tr th, table tr td {
@@ -53,6 +70,12 @@ input[type="button"] {
     width: 100%;
 }
 
+@media only screen and (max-width: 480px){
+    .create-btn {
+        width: 90%;
+    }
+}
+
 input[type="button"]:not(.active) {
 	background-color:transparent;
 }
@@ -69,4 +92,10 @@ input[type="button"]:hover:not(.active) {
 #buttons {
     width: 80%;
     margin: 2em auto;
+}
+
+@media only screen and (max-width: 480px){
+    #buttons {
+        width: 100%;
+    }
 }
