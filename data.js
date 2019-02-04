@@ -1,163 +1,105 @@
+var workers = [
+  {
+    "firstName": "Ben",
+    "lastName": "Ofili",
+    "occupation": "Software Developer",
+    "phoneNumber": "08089999999"
+  },
+  {
+    "firstName": "Ruth",
+    "lastName": "Ofili",
+    "occupation": "Accountant",
+    "phoneNumber": "08019090999"
+  },
+  {
+    "firstName": "Chuka",
+    "lastName": "Okrika",
+    "occupation": "Data Scientist",
+    "phoneNumber": "08099098888"
+  },
+  {
+      "firstName": "Ruth",
+      "lastName": "Ofili",
+      "occupation": "Accountant",
+      "phoneNumber": "08019090999"
+  },
+    {
+      "firstName": "Ruth",
+      "lastName": "Ofili",
+      "occupation": "Accountant",
+      "phoneNumber": "08019090999"
+    },
+    {
+      "firstName": "Ruth",
+      "lastName": "Ofili",
+      "occupation": "Accountant",
+      "phoneNumber": "08019090999"
+    },
+    {
+      "firstName": "Ruth",
+      "lastName": "Ofili",
+      "occupation": "Accountant",
+      "phoneNumber": "08019090999"
+    },
+    {
+      "firstName": "Ruth",
+      "lastName": "Ofili",
+      "occupation": "Accountant",
+      "phoneNumber": "08019090999"
+    },
+    {
+      "firstName": "Ruth",
+      "lastName": "Ofili",
+      "occupation": "Accountant",
+      "phoneNumber": "08019090999"
+    },
+    {
+      "firstName": "Ruth",
+      "lastName": "Ofili",
+      "occupation": "Accountant",
+      "phoneNumber": "08019090999"
+    },
+    {
+      "firstName": "Ruth",
+      "lastName": "Ofili",
+      "occupation": "Accountant",
+      "phoneNumber": "08019090999"
+    },
+    {
+      "firstName": "Ruth",
+      "lastName": "Ofili",
+      "occupation": "Accountant",
+      "phoneNumber": "08019090999"
+    },
+    {
+      "firstName": "Ruth",
+      "lastName": "Ofili",
+      "occupation": "Accountant",
+      "phoneNumber": "08019090999"
+    },
+    {
+      "firstName": "Ruth",
+      "lastName": "Ofili",
+      "occupation": "Accountant",
+      "phoneNumber": "08019090999"
+    },
+    {
+      "firstName": "Ruth",
+      "lastName": "Ofili",
+      "occupation": "Accountant",
+      "phoneNumber": "08019090999"
+    },
+    {
+      "firstName": "Ruth",
+      "lastName": "Ofili",
+      "occupation": "Accountant",
+      "phoneNumber": "08019090999"
+    }
+]
 
-// (function() {
-// 	function toJSONString( form ) {
-// 		var obj = {};
-// 		var elements = form.querySelectorAll( "input" );
-// 		for( var i = 0; i < elements.length; ++i ) {
-// 			var element = elements[i];
-// 			var name = element.name;
-// 			var value = element.value;
-
-// 			if( name ) {
-// 				obj[ name ] = value;
-// 			}
-// 		}
-
-// 		return JSON.stringify( obj );
-// 	}
-
-// 	document.addEventListener( "DOMContentLoaded", function() {
-// 		var form = document.getElementById( "test" );
-// 		var output = document.getElementById( "table" );
-// 		form.addEventListener( "submit", function( e ) {
-// 			e.preventDefault();
-// 			var json = toJSONString( this );
-// 			output.innerHTML = json;
-
-// 		}, false);
-
-// 	});
-
-// })();
 
 
 function CreateTable() {
-    var workers = [
-        {
-          "firstName": "Ben",
-          "lastName": "Ofili",
-          "occupation": "Software Developer",
-          "phoneNumber": "08089999999"
-        },
-        {
-          "firstName": "Ruth",
-          "lastName": "Ofili",
-          "occupation": "Accountant",
-          "phoneNumber": "08019090999"
-        },
-        {
-          "firstName": "Chuka",
-          "lastName": "Okrika",
-          "occupation": "Data Scientist",
-          "phoneNumber": "08099098888"
-        },
-        {
-            "firstName": "Ruth",
-            "lastName": "Ofili",
-            "occupation": "Accountant",
-            "phoneNumber": "08019090999"
-          },
-          {
-            "firstName": "Ruth",
-            "lastName": "Ofili",
-            "occupation": "Accountant",
-            "phoneNumber": "08019090999"
-          },
-          {
-            "firstName": "Ruth",
-            "lastName": "Ofili",
-            "occupation": "Accountant",
-            "phoneNumber": "08019090999"
-          },
-          {
-            "firstName": "Ruth",
-            "lastName": "Ofili",
-            "occupation": "Accountant",
-            "phoneNumber": "08019090999"
-          },
-          {
-            "firstName": "Ruth",
-            "lastName": "Ofili",
-            "occupation": "Accountant",
-            "phoneNumber": "08019090999"
-          },
-          {
-            "firstName": "Ruth",
-            "lastName": "Ofili",
-            "occupation": "Accountant",
-            "phoneNumber": "08019090999"
-          },
-          {
-            "firstName": "Ruth",
-            "lastName": "Ofili",
-            "occupation": "Accountant",
-            "phoneNumber": "08019090999"
-          },
-          {
-            "firstName": "Ruth",
-            "lastName": "Ofili",
-            "occupation": "Accountant",
-            "phoneNumber": "08019090999"
-          },
-          {
-            "firstName": "Ruth",
-            "lastName": "Ofili",
-            "occupation": "Accountant",
-            "phoneNumber": "08019090999"
-          },
-          {
-            "firstName": "Ruth",
-            "lastName": "Ofili",
-            "occupation": "Accountant",
-            "phoneNumber": "08019090999"
-          },
-          {
-            "firstName": "Ruth",
-            "lastName": "Ofili",
-            "occupation": "Accountant",
-            "phoneNumber": "08019090999"
-          },
-          {
-            "firstName": "Ruth",
-            "lastName": "Ofili",
-            "occupation": "Accountant",
-            "phoneNumber": "08019090999"
-          },
-          {
-            "firstName": "Ruth",
-            "lastName": "Ofili",
-            "occupation": "Accountant",
-            "phoneNumber": "08019090999"
-          }
-      ]
-
-
-    // var f = document.getElementById('firstName').value;
-    // var l = document.getElementById('lastName').value;
-    // var o = document.getElementById('occupation').value;
-    // var p = document.getElementById('phone').value;
-
-    // var form = document.getElementById("test")
-    // var elements = form.querySelectorAll("input");
-    // console.log(elements)
-
-    // var obj = {}
-
-    // for( var i = 0; i < elements.length; ++i ) {
-    //     var element = elements[i];
-    //     var name = element.name;
-    //     var value = element.value;
-
-    //     // console.log(element[i]);
-
-    //     if(name) {
-    //         obj[name] = value;
-    //     }
-    // }
-
-    // return JSON.stringify( obj );
-
-    // document.getElementById("table").innerHTML = toJSONString(this);
 
     // EXTRACT VALUE FOR HTML HEADER. 
     var col = []; // initialize an empty array called col
@@ -177,7 +119,10 @@ function CreateTable() {
 
     for (var i = 0; i < col.length; i++) { // loop through the elements in the col array
         var th = document.createElement("th"); // create a table head element and save it in th variable
+        // console.log(col[i]);
         th.innerHTML = col[i]; // add each element of the col array in our th table head.
+        console.log(i);
+        th.setAttribute("onclick", "sortTable("+[i]+")");
         tr.appendChild(th); // append our table head element to our table row
     }
 
@@ -211,7 +156,7 @@ function CreateTable() {
     // get the first cell's tag name (in the first row)
     $firstRow = table.rows[0].firstElementChild.tagName,
     // boolean var to check if table has a head row
-    $hasHead = ($firstRow === "TH"),
+    $hasHead = ($firstRow === "th"),
     // an array to hold each row
     $tr = [],
     // loop counters, to start count from rows[1] (2nd row) if the first row has a head tag
@@ -221,18 +166,18 @@ function CreateTable() {
     // count the number of pages
     var $pageCount = Math.ceil($rowCount / $n);
     // console.log($pageCount)
+
     // if we had one page only, then we have nothing to do ..
     if ($pageCount > 1) {
         // assign each row outHTML (tag name & innerHTML) to the array
         for ($i = $j, $ii = 0; $i < $rowCount; $i++, $ii++)
             $tr[$ii] = table.rows[$i].outerHTML;
-            console.log($i)
-            console.log($j)
-            console.log($ii)
+            
         // create a div block to hold the buttons
         table.insertAdjacentHTML("afterend","<div id='buttons'></div");
         // the first sort, default page is the first one
         sort(1);
+        // console.log(sort(1))
     }
 
     // ($p) is the selected page number. it will be generated when a user clicks a button
@@ -272,4 +217,63 @@ function CreateTable() {
     }
 
 }
+
+
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  // console.log(rows);
+  table = document.getElementsByTagName("table");
+  // console.log(table)
+  switching = true;
+  // Set the sorting direction to ascending:
+  dir = "asc"; 
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // Start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /* Loop through all table rows (except the
+    first, which contains table headers): */
+    for (i = 1; i < (rows.length - 1); i++) {
+      // Start by saying there should be no switching:
+      shouldSwitch = false;
+      /* Get the two elements you want to compare,
+      one from current row and one from the next: */
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /* Check if the two rows should switch place,
+      based on the direction, asc or desc: */
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark that a switch has been done: */
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      // Each time a switch is done, increase this count by 1:
+      switchcount ++; 
+    } else {
+      /* If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again. */
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+
 

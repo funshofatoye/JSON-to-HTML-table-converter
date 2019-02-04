@@ -4,6 +4,11 @@ body {
 
 }
 
+.container {
+    width: 400px;
+    margin: 3em auto;
+}
+
 
 table {
     width: 80%;
@@ -26,10 +31,15 @@ table tr th {
 input[type="button"] {
 	transition: all .3s;
     border: 1px solid #ddd;
-    padding: 8px 16px;
+    padding: 10px 16px;
     text-decoration: none;
     border-radius: 5px;
-	font-size: 15px;
+    font-size: 15px;
+    
+}
+
+.create-btn {
+    width: 100%;
 }
 
 input[type="button"]:not(.active) {
@@ -42,5 +52,5 @@ input[type="button"]:not(.active) {
 }
 
 input[type="button"]:hover:not(.active) {
-	background-color: #ddd;
+    background-color: #ddd;
 }
