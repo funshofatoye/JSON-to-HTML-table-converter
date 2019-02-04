@@ -55,7 +55,7 @@ table tr th {
     cursor: pointer;
 }
 
-input[type="button"] {
+input[type="button"], button {
 	transition: all .3s;
     border: 1px solid #ddd;
     padding: 10px 16px;

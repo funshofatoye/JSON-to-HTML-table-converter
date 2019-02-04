@@ -148,6 +148,7 @@ var body = document.body;
                 for(var i = 0,len = pagination_count; i < len; i++){
                     var index = i;
                     var button = document.createElement('button');
+                    button.setAttribute("id", "")
                     button.innerText = index + 1;
                     button.value = index;
                     button.onclick = function(){
