@@ -114,6 +114,7 @@ function CreateTable() {
 
     var table = document.createElement("table"); // create an HTML table element and save in table variable
     table.setAttribute("id", "data_table")
+
     // CREATE TABLE HEADERS
     var tr = table.insertRow(-1); // create a table row.
 
@@ -141,9 +142,6 @@ function CreateTable() {
             }
             
         }
-
-        
-        
     }
 
     // insert the table into an html container.
@@ -184,7 +182,6 @@ function CreateTable() {
         table.insertAdjacentHTML("afterend","<div id='buttons'></div");
         // the first sort, default page is the first one
         sort(1);
-        // console.log(sort(1))
     }
 
     // ($p) is the selected page number. it will be generated when a user clicks a button
@@ -211,12 +208,12 @@ function CreateTable() {
         /* this variables will disable the "Prev" button on 1st page
         and "next" button on the last one */
         var	$prevDis = ($cur == 1)?"disabled":"",
-            $nextDis = ($cur == $pCount)?"disabled":"",
-            /* this ($buttons) will hold every single button needed
-            ** it will creates each button and sets the onclick attribute
-            ** to the "sort" function with a special ($p) number..
-            */
-            $buttons = "<input type='button' value='&lt;&lt; Prev' onclick='sort("+($cur - 1)+")' "+$prevDis+">";
+        $nextDis = ($cur == $pCount)?"disabled":"",
+        /* this ($buttons) will hold every single button needed
+        ** it will creates each button and sets the onclick attribute
+        ** to the "sort" function with a special ($p) number..
+        */
+        $buttons = "<input type='button' value='&lt;&lt; Prev' onclick='sort("+($cur - 1)+")' "+$prevDis+">";
         for ($i=1; $i<=$pCount;$i++)
             $buttons += "<input type='button' id='id"+$i+"'value='"+$i+"' onclick='sort("+$i+")'>";
         $buttons += "<input type='button' value='Next &gt;&gt;' onclick='sort("+($cur + 1)+")' "+$nextDis+">";
