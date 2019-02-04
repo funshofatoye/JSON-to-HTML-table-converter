@@ -26,6 +26,7 @@ table tr th, table tr td {
 table tr th {
     background-color: black;
     color: white;
+    cursor: pointer;
 }
 
 input[type="button"] {
@@ -35,6 +36,7 @@ input[type="button"] {
     text-decoration: none;
     border-radius: 5px;
     font-size: 15px;
+    cursor: pointer;
     
 }
 

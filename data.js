@@ -97,7 +97,8 @@ var workers = [
     }
 ]
 
-
+var init = document.getElementById("data");
+init.innerHTML = JSON.stringify(workers);
 
 function CreateTable() {
 
@@ -113,7 +114,7 @@ function CreateTable() {
 
 
     var table = document.createElement("table"); // create an HTML table element and save in table variable
-    console.log(table)
+    table.setAttribute("id", "data_table")
     // CREATE TABLE HEADERS
     var tr = table.insertRow(-1); // create a table row.
 
@@ -222,8 +223,8 @@ function CreateTable() {
 function sortTable(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
   // console.log(rows);
-  table = document.getElementsByTagName("table");
-  // console.log(table)
+  table = document.getElementById("data_table");
+  console.log(table)
   switching = true;
   // Set the sorting direction to ascending:
   dir = "asc"; 
