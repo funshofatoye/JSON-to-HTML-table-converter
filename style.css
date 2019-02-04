@@ -4,6 +4,15 @@ body {
 
 }
 
+#data {
+    width: 80%;
+    text-align: center;
+    margin: 2em auto;
+    height: 200px;
+    overflow: auto;
+    background-color: rgb(231, 231, 231);
+}
+
 .container {
     width: 400px;
     margin: 3em auto;
@@ -55,4 +64,9 @@ input[type="button"]:not(.active) {
 
 input[type="button"]:hover:not(.active) {
     background-color: #ddd;
+}
+
+#buttons {
+    width: 80%;
+    margin: 2em auto;
 }

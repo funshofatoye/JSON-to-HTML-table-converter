@@ -2,8 +2,7 @@ var workers = [
   {
     "firstName": "Ben",
     "lastName": "Ofili",
-    "occupation": "Software Developer",
-    "phoneNumber": "08089999999"
+    "occupation": "Software Developer"
   },
   {
     "firstName": "Ruth",
@@ -20,83 +19,83 @@ var workers = [
   {
       "firstName": "Ruth",
       "lastName": "Ofili",
-      "occupation": "Accountant",
       "phoneNumber": "08019090999"
   },
-    {
-      "firstName": "Ruth",
-      "lastName": "Ofili",
-      "occupation": "Accountant",
-      "phoneNumber": "08019090999"
-    },
-    {
-      "firstName": "Ruth",
-      "lastName": "Ofili",
-      "occupation": "Accountant",
-      "phoneNumber": "08019090999"
-    },
-    {
-      "firstName": "Ruth",
-      "lastName": "Ofili",
-      "occupation": "Accountant",
-      "phoneNumber": "08019090999"
-    },
-    {
-      "firstName": "Ruth",
-      "lastName": "Ofili",
-      "occupation": "Accountant",
-      "phoneNumber": "08019090999"
-    },
-    {
-      "firstName": "Ruth",
-      "lastName": "Ofili",
-      "occupation": "Accountant",
-      "phoneNumber": "08019090999"
-    },
-    {
-      "firstName": "Ruth",
-      "lastName": "Ofili",
-      "occupation": "Accountant",
-      "phoneNumber": "08019090999"
-    },
-    {
-      "firstName": "Ruth",
-      "lastName": "Ofili",
-      "occupation": "Accountant",
-      "phoneNumber": "08019090999"
-    },
-    {
-      "firstName": "Ruth",
-      "lastName": "Ofili",
-      "occupation": "Accountant",
-      "phoneNumber": "08019090999"
-    },
-    {
-      "firstName": "Ruth",
-      "lastName": "Ofili",
-      "occupation": "Accountant",
-      "phoneNumber": "08019090999"
-    },
-    {
-      "firstName": "Ruth",
-      "lastName": "Ofili",
-      "occupation": "Accountant",
-      "phoneNumber": "08019090999"
-    },
-    {
-      "firstName": "Ruth",
-      "lastName": "Ofili",
-      "occupation": "Accountant",
-      "phoneNumber": "08019090999"
-    },
-    {
-      "firstName": "Ruth",
-      "lastName": "Ofili",
-      "occupation": "Accountant",
-      "phoneNumber": "08019090999"
-    }
+  {
+    "firstName": "Ruth",
+    "lastName": "Ofili",
+    "occupation": "Accountant",
+    "phoneNumber": "08019090999"
+  },
+  {
+    "firstName": "Ruth",
+    "lastName": "Ofili",
+    "occupation": "Accountant"
+  },
+  {
+    "firstName": "Ruth",
+    "lastName": "Ofili",
+    "occupation": "Accountant",
+    "phoneNumber": "08019090999"
+  },
+  {
+    "firstName": "Ruth",
+    "lastName": "Ofili",
+    "occupation": "Accountant",
+    "phoneNumber": "08019090999"
+  },
+  {
+    "firstName": "Ruth",
+    "lastName": "Ofili",
+    "occupation": "Accountant",
+    "phoneNumber": "08019090999"
+  },
+  {
+    "firstName": "Ruth",
+    "lastName": "Ofili",
+    "occupation": "Accountant",
+    "phoneNumber": "08019090999"
+  },
+  {
+    "firstName": "Ruth",
+    "lastName": "Ofili",
+    "occupation": "Accountant",
+    "phoneNumber": "08019090999"
+  },
+  {
+    "firstName": "Ruth",
+    "lastName": "Ofili",
+    "occupation": "Accountant",
+    "phoneNumber": "08019090999"
+  },
+  {
+    "firstName": "Ruth",
+    "lastName": "Ofili",
+    "occupation": "Accountant",
+    "phoneNumber": "08019090999"
+  },
+  {
+    "firstName": "Ruth",
+    "lastName": "Ofili",
+    "occupation": "Accountant",
+    "phoneNumber": "08019090999"
+  },
+  {
+    "firstName": "Ruth",
+    "lastName": "Ofili",
+    "occupation": "Accountant",
+    "phoneNumber": "08019090999"
+  },
+  {
+    "firstName": "Ruth",
+    "lastName": "Ofili",
+    "occupation": "Accountant",
+    "phoneNumber": "08019090999"
+  }
 ]
 
+
+// show JSON data on page
 var init = document.getElementById("data");
 init.innerHTML = JSON.stringify(workers);
 
@@ -119,12 +118,11 @@ function CreateTable() {
     var tr = table.insertRow(-1); // create a table row.
 
     for (var i = 0; i < col.length; i++) { // loop through the elements in the col array
-        var th = document.createElement("th"); // create a table head element and save it in th variable
-        // console.log(col[i]);
-        th.innerHTML = col[i]; // add each element of the col array in our th table head.
-        console.log(i);
-        th.setAttribute("onclick", "sortTable("+[i]+")");
-        tr.appendChild(th); // append our table head element to our table row
+      var th = document.createElement("th"); // create a table head element and save it in th variable
+      th.innerHTML = col[i]; // add each element of the col array in our th table head.
+      
+      th.setAttribute("onclick", "sortTable("+[i]+")");
+      tr.appendChild(th); // append our table head element to our table row
     }
 
 
@@ -134,11 +132,19 @@ function CreateTable() {
         tr = table.insertRow(-1); // create another row element
 
         for (var j = 0; j < col.length; j++) {
-            var tabCell = tr.insertCell(-1);
-            tabCell.innerHTML = workers[i][col[j]];
-        }
-    }
 
+            var tabCell = tr.insertCell(-1);
+            if(workers[i][col[j]] == "" || workers[i][col[j]] === undefined){
+              tabCell.innerHTML = "NOT AVAILABLE";
+            } else {
+              tabCell.innerHTML = workers[i][col[j]];
+            }
+            
+        }
+
+        
+        
+    }
 
     // insert the table into an html container.
     var divContainer = document.getElementById("table");
@@ -149,7 +155,7 @@ function CreateTable() {
     // create pagination
 
     // get the table element
-    // var table = document.getElementsByTagName("table"),
+    // var table = document.getElementById("data_table"),
     // number of rows per page
     var $n = 5,
     // number of rows of the table
@@ -222,9 +228,9 @@ function CreateTable() {
 
 function sortTable(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  // console.log(rows);
+  
   table = document.getElementById("data_table");
-  console.log(table)
+  
   switching = true;
   // Set the sorting direction to ascending:
   dir = "asc"; 
